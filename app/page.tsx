@@ -2,16 +2,13 @@
 
 import HeroSection from './components/HeroSection';
 import SystemArchitecture from './components/SystemArchitecture';
-import TechnicalMetrics from './components/TechnicalMetrics';
+// import TechnicalMetrics from './components/TechnicalMetrics';
 import ContactSection from './components/ContactSection';
 // import { ProjectCard } from './components/ProjectCard'; 
-import dynamic from 'next/dynamic';
+// import dynamic from 'next/dynamic';
 import { ThreeDCard } from './components/ThreeDcard';
 
-const ProjectCard = dynamic(() => 
-  import('./components/ProjectCard').then(mod => mod.ProjectCard), {
-	ssr: false
-});
+
 
 const projects = [
 	{

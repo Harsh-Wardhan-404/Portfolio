@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-	title: '[Your Name] - Backend Developer',
+	title: '[Harshwardhan] - Backend Developer',
 	description:
 		'Welcome to my portfolio! I am a passionate backend developer specializing in building scalable server architectures, robust APIs, and high-performance distributed systems. With expertise in cloud infrastructure and database optimization, I create efficient and reliable backend solutions.',
 	keywords: [
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
 		'Cloud Computing',
 		'Microservices',
 		'DevOps',
-		'[Your Name]',
+		'[Harshwardhan]',
 		'Node.js',
 		'Python',
 		'Java',
@@ -33,19 +33,19 @@ export const metadata: Metadata = {
 		'System Design',
 		'Backend Architecture',
 	],
-	authors: [{ name: '[Your Name]' }],
-	creator: '[Your Name]',
+	authors: [{ name: '[Harshwardhan]' }],
+	creator: '[Harshwardhan]',
 	openGraph: {
-		title: '[Your Name] - Backend Developer Portfolio',
+		title: '[Harshwardhan] - Backend Developer Portfolio',
 		description: 'Passionate backend developer crafting scalable and efficient server architectures. Explore my projects and technical expertise.',
 		url: 'https://your-domain.com',
-		siteName: '[Your Name] - Portfolio',
+		siteName: '[Harshwardhan] - Portfolio',
 		images: [
 			{
 				url: '/og-image.jpg',
 				width: 1200,
 				height: 630,
-				alt: '[Your Name] - Backend Developer Portfolio',
+				alt: '[Harshwardhan] - Backend Developer Portfolio',
 			},
 		],
 		locale: 'en_US',
