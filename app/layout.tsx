@@ -42,7 +42,7 @@ export const metadata: Metadata = {
 		siteName: '[Harshwardhan] - Portfolio',
 		images: [
 			{
-				url: '/og-image.jpg',
+				url: '/mog.jpg',
 				width: 1200,
 				height: 630,
 				alt: '[Harshwardhan] - Backend Developer Portfolio',
@@ -56,7 +56,7 @@ export const metadata: Metadata = {
 		title: '[Harsh_wn] - Backend Developer',
 		description: 'Passionate backend developer crafting scalable and efficient server architectures. Explore my projects and technical expertise.',
 		creator: '@harsh_wdym',
-		images: ['/og-image.jpg'],
+		images: ['/mog.jpg'],
 	},
 	robots: {
 		index: true,
