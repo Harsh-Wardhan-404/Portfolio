@@ -38,7 +38,7 @@ export const metadata: Metadata = {
 	openGraph: {
 		title: '[Harshwardhan] - Backend Developer Portfolio',
 		description: 'Passionate backend developer crafting scalable and efficient server architectures. Explore my projects and technical expertise.',
-		url: 'https://your-domain.com',
+		url: 'https://portfolio.harshwardhan.tech',
 		siteName: '[Harshwardhan] - Portfolio',
 		images: [
 			{
@@ -53,9 +53,9 @@ export const metadata: Metadata = {
 	},
 	twitter: {
 		card: 'summary_large_image',
-		title: '[Your Name] - Backend Developer',
+		title: '[Harsh_wn] - Backend Developer',
 		description: 'Passionate backend developer crafting scalable and efficient server architectures. Explore my projects and technical expertise.',
-		creator: '@yourusername',
+		creator: '@harsh_wdym',
 		images: ['/og-image.jpg'],
 	},
 	robots: {
