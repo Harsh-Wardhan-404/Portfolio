@@ -73,14 +73,16 @@ export const ScratchToReveal: React.FC<ScratchToRevealProps> = ({
           if (!hasScratchedRef.current) {
             canvas.width = width * dpr;
             canvas.height = height * dpr;
-            ctx.scale(dpr, dpr);
+            ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+            ctx.imageSmoothingEnabled = true;
+            ctx.imageSmoothingQuality = "high";
             
             // Make canvas background transparent so gradient border shows through
             // The BackgroundGradient has p-[4px] which creates the border effect
             ctx.clearRect(0, 0, width, height);
-            
+
             // Create rounded rectangle clipping path to match the card's rounded corners
-            const borderRadius = 37;
+            const borderRadius = 32;
             ctx.beginPath();
             ctx.roundRect(0, 0, width, height, borderRadius);
             ctx.clip();
@@ -250,7 +252,7 @@ export const ScratchToReveal: React.FC<ScratchToRevealProps> = ({
     >
       <canvas
         ref={canvasRef}
-        className="absolute left-0 top-0 z-20 rounded-[22px] pointer-events-auto overflow-hidden"
+        className="absolute left-0 top-0 z-20 rounded-[37px] pointer-events-auto overflow-hidden"
         onMouseDown={handleMouseDown}
         onTouchStart={handleTouchStart}
         style={{ width: `${width}px`, height: `${height}px` }}

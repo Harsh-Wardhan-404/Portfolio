@@ -31,13 +31,13 @@ export function Card() {
         overlayImage="/mog.jpg"
         className="w-full h-full"
       >
-        <BackgroundGradient className="rounded-[22px] w-full h-full bg-white dark:bg-zinc-900">
+        <BackgroundGradient className="rounded-[32px] w-full h-full bg-white dark:bg-zinc-900">
           <img
             src={`/pfp.png`}
             alt="revealed"
             height="500"
             width="500"
-            className="object-cover rounded-3xl"
+            className="object-cover rounded-[32px]"
           />
         </BackgroundGradient>
       </ScratchToReveal>
