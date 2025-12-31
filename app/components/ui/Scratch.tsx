@@ -28,6 +28,7 @@ export const ScratchToReveal: React.FC<ScratchToRevealProps> = ({
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const [isScratching, setIsScratching] = useState(false);
   const [isComplete, setIsComplete] = useState(false);
+  const [isOverlayLoaded, setIsOverlayLoaded] = useState(false);
   const imageRef = useRef<HTMLImageElement | null>(null);
   const hasScratchedRef = useRef(false);
   // const baseImageDataRef = useRef<ImageData | null>(null);
@@ -117,8 +118,13 @@ export const ScratchToReveal: React.FC<ScratchToRevealProps> = ({
             ctx.drawImage(img, drawX, drawY, drawWidth, drawHeight);
             imageRef.current = img;
             isInitializedRef.current = true;
+            setIsOverlayLoaded(true); // Mark overlay as loaded
           }
         }
+      };
+      img.onerror = () => {
+        // If overlay fails to load, still show the background
+        setIsOverlayLoaded(true);
       };
       img.src = overlayImage;
     } else if (!overlayImage && !isInitializedRef.current) {
@@ -137,6 +143,7 @@ export const ScratchToReveal: React.FC<ScratchToRevealProps> = ({
       ctx.fillStyle = gradient;
       ctx.fillRect(0, 0, width, height);
       isInitializedRef.current = true;
+      setIsOverlayLoaded(true); // No overlay, so mark as loaded
     }
   }, [gradientColors, overlayImage, width, height]);
 
@@ -257,7 +264,17 @@ export const ScratchToReveal: React.FC<ScratchToRevealProps> = ({
         onTouchStart={handleTouchStart}
         style={{ width: `${width}px`, height: `${height}px` }}
       ></canvas>
-      {children}
+      <div 
+        className={cn(
+          "relative z-10",
+          !isOverlayLoaded && "opacity-0"
+        )}
+        style={{
+          transition: "opacity 0.2s ease-in-out"
+        }}
+      >
+        {children}
+      </div>
     </motion.div>
   );
 };
