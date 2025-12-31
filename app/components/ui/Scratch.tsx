@@ -30,7 +30,7 @@ export const ScratchToReveal: React.FC<ScratchToRevealProps> = ({
   const [isComplete, setIsComplete] = useState(false);
   const imageRef = useRef<HTMLImageElement | null>(null);
   const hasScratchedRef = useRef(false);
-  const baseImageDataRef = useRef<ImageData | null>(null);
+  // const baseImageDataRef = useRef<ImageData | null>(null);
   const isInitializedRef = useRef(false);
 
   const controls = useAnimation();
