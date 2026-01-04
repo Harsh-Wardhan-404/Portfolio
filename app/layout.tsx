@@ -39,11 +39,11 @@ export const metadata: Metadata = {
 	openGraph: {
 		title: '[Harshwardhan] - Backend Developer Portfolio',
 		description: 'Passionate backend developer crafting scalable and efficient server architectures. Explore my projects and technical expertise.',
-		url: 'https://portfolio.harshwardhan.tech',
+		url: 'https://harshwn.com',
 		siteName: '[Harshwardhan] - Portfolio',
 		images: [
 			{
-				url: 'https://raw.githubusercontent.com/Harsh-Wardhan-404/portfolio/main/public/mog.jpg',
+				url: 'https://harshwn.com/mog.jpg',
 				width: 1200,
 				height: 630,
 				alt: '[Harshwardhan] - Backend Developer Portfolio',
@@ -57,7 +57,7 @@ export const metadata: Metadata = {
 		title: '[Harsh_wn] - Backend Developer',
 		description: 'Passionate backend developer crafting scalable and efficient server architectures. Explore my projects and technical expertise.',
 		creator: '@harsh_wdym',
-		images: ['https://raw.githubusercontent.com/Harsh-Wardhan-404/portfolio/main/public/mog.jpg'],
+		images: ['https://harshwn.com/mog.jpg'],
 	},
 	robots: {
 		index: true,
